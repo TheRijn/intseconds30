@@ -3,7 +3,6 @@ import os
 from random import randint, shuffle
 
 from django.db import models
-# Create your models here.
 from django.db.models import Max
 
 
