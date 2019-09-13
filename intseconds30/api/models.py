@@ -83,7 +83,7 @@ class Word(models.Model):
         return f"{self.title} ({self.category.name if self.category else ''}) @ {self.pack.name if self.pack else ''}"
 
 
-def random_secret(length: int = 18) -> str:
+def random_secret(length: int = 16) -> str:
     return binascii.b2a_hex(os.urandom(length // 2)).decode()
 
 
