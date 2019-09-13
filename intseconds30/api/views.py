@@ -37,7 +37,7 @@ def get_card(request: HttpRequest):
     elif token and secret:
         # Verify token and secret match
         try:
-            session = Session.objects.get(id=int(token), secret=secret)
+            session = Session.objects.get(id=token, secret=secret)
         except ObjectDoesNotExist:
             return JsonResponse({"error": "Token expired or invalid"})
 

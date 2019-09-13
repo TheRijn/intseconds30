@@ -1,15 +1,28 @@
 from django.contrib import admin
 
-from .models import Word, Card, Session
-
-# Register your models here.
-
-admin.site.register(Word)
-admin.site.register(Card)
+from .models import Word, Card, Session, Category, Pack
 
 
-class PlaySessionAdmin(admin.ModelAdmin):
+class WordInline(admin.TabularInline):
+    model = Word
+    extra = 0
+    # fields = ['title']
+
+
+class CardAdmin(admin.ModelAdmin):
+    inlines = (WordInline,)
+
+
+class SessionAdmin(admin.ModelAdmin):
     readonly_fields = ('started', 'last_activity',)
 
 
-admin.site.register(Session, PlaySessionAdmin)
+class CategoryAdmin(admin.ModelAdmin):
+    inlines = (WordInline,)
+
+
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Card, CardAdmin)
+admin.site.register(Session, SessionAdmin)
+admin.site.register(Word)
+admin.site.register(Pack)

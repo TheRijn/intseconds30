@@ -16,6 +16,9 @@ class Card(models.Model):
     def words_list(self):
         return list(self.words.all().values_list('title', flat=True))
 
+    def word_list_with_description(self):
+        return self.words.all().values('title', 'description')
+
     @property
     def words_list_shuffled(self):
         words = self.words_list
@@ -35,8 +38,33 @@ class Card(models.Model):
                 return card
 
 
+class Category(models.Model):
+    name = models.fields.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Categories"
+
+
+class Pack(models.Model):
+    name = models.fields.CharField(max_length=32)
+
+    def __str__(self):
+        return self.name
+
+
 class Word(models.Model):
     title = models.fields.CharField(max_length=50)
+    description = models.fields.CharField(blank=True, max_length=512)
+    category = models.ForeignKey(
+        Category,
+        related_name="words",
+        on_delete=models.SET_NULL,
+        null=True
+    )
+
     card = models.ForeignKey(
         Card,
         related_name="words",
@@ -44,12 +72,19 @@ class Word(models.Model):
         null=True
     )
 
+    pack = models.ForeignKey(
+        Pack,
+        related_name="words",
+        on_delete=models.SET_NULL,
+        null=True
+    )
+
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.title} ({self.category.name if self.category else ''}) @ {self.pack.name if self.pack else ''}"
 
 
-def random_secret() -> str:
-    return binascii.b2a_hex(os.urandom(8)).decode()
+def random_secret(length: int = 18) -> str:
+    return binascii.b2a_hex(os.urandom(length // 2)).decode()
 
 
 class Session(models.Model):
