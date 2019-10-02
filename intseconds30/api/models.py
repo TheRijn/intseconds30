@@ -10,14 +10,15 @@ class Card(models.Model):
     number = models.fields.IntegerField(primary_key=True)
 
     def __str__(self):
-        return f"Card {self.number} ({self.words.count()}): {', '.join(self.words_list)}"
+        return f"Card {self.number} ({self.words.count()})"
 
     @property
     def words_list(self):
-        return list(self.words.all().values_list('title', flat=True))
+        return list(self.words.all().values_list('word', flat=True))
 
-    def word_list_with_description(self):
-        return self.words.all().values('title', 'description')
+    @property
+    def words_list_with_description(self):
+        return list(self.words.all().values('word', 'description'))
 
     @property
     def words_list_shuffled(self):
@@ -39,7 +40,7 @@ class Card(models.Model):
 
 
 class Category(models.Model):
-    name = models.fields.CharField(max_length=20)
+    name = models.fields.CharField(max_length=32)
 
     def __str__(self):
         return self.name
@@ -56,31 +57,34 @@ class Pack(models.Model):
 
 
 class Word(models.Model):
-    title = models.fields.CharField(max_length=50)
+    word = models.fields.CharField(max_length=50)
     description = models.fields.CharField(blank=True, max_length=512)
     category = models.ForeignKey(
         Category,
         related_name="words",
         on_delete=models.SET_NULL,
-        null=True
+        null=True,
+        blank=True,
     )
 
     card = models.ForeignKey(
         Card,
         related_name="words",
         on_delete=models.SET_NULL,
-        null=True
+        null=True,
+        blank=True,
     )
 
     pack = models.ForeignKey(
         Pack,
         related_name="words",
         on_delete=models.SET_NULL,
-        null=True
+        null=True,
+        blank=True,
     )
 
     def __str__(self):
-        return f"{self.title} ({self.category.name if self.category else ''}) @ {self.pack.name if self.pack else ''}"
+        return f"{self.word} ({self.category.name if self.category else ''}) @ {self.pack.name if self.pack else ''}"
 
 
 def random_secret(length: int = 16) -> str:

@@ -1,0 +1,524 @@
+[
+{
+    "model": "api.card",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 2,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 3,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 4,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 5,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 6,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 7,
+    "fields": {}
+},
+{
+    "model": "api.card",
+    "pk": 8,
+    "fields": {}
+},
+{
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+        "name": "datatype"
+    }
+},
+{
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+        "name": "CS50 problem"
+    }
+},
+{
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+        "name": "Person"
+    }
+},
+{
+    "model": "api.pack",
+    "pk": 1,
+    "fields": {
+        "name": "int seconds = 30;"
+    }
+},
+{
+    "model": "api.pack",
+    "pk": 2,
+    "fields": {
+        "name": "for seconds in range(30):"
+    }
+},
+{
+    "model": "api.pack",
+    "pk": 3,
+    "fields": {
+        "name": "char *general_knowledge;"
+    }
+},
+{
+    "model": "api.word",
+    "pk": 5,
+    "fields": {
+        "word": "integer",
+        "description": "",
+        "category": null,
+        "card": 1,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 6,
+    "fields": {
+        "word": "Alan Turing",
+        "description": "",
+        "category": null,
+        "card": 1,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 7,
+    "fields": {
+        "word": "Windows",
+        "description": "",
+        "category": null,
+        "card": 1,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 8,
+    "fields": {
+        "word": "vigenere",
+        "description": "",
+        "category": null,
+        "card": 1,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 9,
+    "fields": {
+        "word": "Science Park",
+        "description": "",
+        "category": null,
+        "card": 1,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 10,
+    "fields": {
+        "word": "char",
+        "description": "",
+        "category": null,
+        "card": 2,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 11,
+    "fields": {
+        "word": "Mark Zuckerberg",
+        "description": "",
+        "category": null,
+        "card": 2,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 12,
+    "fields": {
+        "word": "ASCII",
+        "description": "",
+        "category": null,
+        "card": 2,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 13,
+    "fields": {
+        "word": "greedy",
+        "description": "",
+        "category": null,
+        "card": 2,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 14,
+    "fields": {
+        "word": "Sjeel",
+        "description": "",
+        "category": null,
+        "card": 2,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 15,
+    "fields": {
+        "word": "float",
+        "description": "",
+        "category": null,
+        "card": 3,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 16,
+    "fields": {
+        "word": "Zamyla (Chan)",
+        "description": "",
+        "category": null,
+        "card": 3,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 17,
+    "fields": {
+        "word": "Linux",
+        "description": "",
+        "category": null,
+        "card": 3,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 18,
+    "fields": {
+        "word": "mario",
+        "description": "",
+        "category": null,
+        "card": 3,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 19,
+    "fields": {
+        "word": "check50",
+        "description": "",
+        "category": null,
+        "card": 3,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 20,
+    "fields": {
+        "word": "bool",
+        "description": "",
+        "category": null,
+        "card": 4,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 21,
+    "fields": {
+        "word": "Martijn (Stegeman)",
+        "description": "",
+        "category": null,
+        "card": 4,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 22,
+    "fields": {
+        "word": "bit",
+        "description": "",
+        "category": null,
+        "card": 4,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 23,
+    "fields": {
+        "word": "credit",
+        "description": "",
+        "category": 3,
+        "card": 4,
+        "pack": 1
+    }
+},
+{
+    "model": "api.word",
+    "pk": 24,
+    "fields": {
+        "word": "debug50",
+        "description": "",
+        "category": null,
+        "card": 4,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 25,
+    "fields": {
+        "word": "string",
+        "description": "",
+        "category": null,
+        "card": 5,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 26,
+    "fields": {
+        "word": "Steve Jobs",
+        "description": "",
+        "category": null,
+        "card": 5,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 27,
+    "fields": {
+        "word": "byte",
+        "description": "",
+        "category": null,
+        "card": 5,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 28,
+    "fields": {
+        "word": "scratch",
+        "description": "",
+        "category": null,
+        "card": 5,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 29,
+    "fields": {
+        "word": "CS50 IDE",
+        "description": "",
+        "category": null,
+        "card": 5,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 30,
+    "fields": {
+        "word": "array",
+        "description": "",
+        "category": 1,
+        "card": 6,
+        "pack": 1
+    }
+},
+{
+    "model": "api.word",
+    "pk": 31,
+    "fields": {
+        "word": "Bill Gates",
+        "description": "",
+        "category": 3,
+        "card": 6,
+        "pack": 3
+    }
+},
+{
+    "model": "api.word",
+    "pk": 32,
+    "fields": {
+        "word": "macOS",
+        "description": "",
+        "category": null,
+        "card": 6,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 33,
+    "fields": {
+        "word": "initials",
+        "description": "",
+        "category": 2,
+        "card": 6,
+        "pack": 1
+    }
+},
+{
+    "model": "api.word",
+    "pk": 34,
+    "fields": {
+        "word": "Magic Number",
+        "description": "",
+        "category": null,
+        "card": 6,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 35,
+    "fields": {
+        "word": "double",
+        "description": "",
+        "category": 1,
+        "card": 7,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 36,
+    "fields": {
+        "word": "David J. Malan",
+        "description": "",
+        "category": null,
+        "card": 7,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 37,
+    "fields": {
+        "word": "Compiler",
+        "description": "",
+        "category": null,
+        "card": 7,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 38,
+    "fields": {
+        "word": "caesar",
+        "description": "",
+        "category": 2,
+        "card": 7,
+        "pack": 1
+    }
+},
+{
+    "model": "api.word",
+    "pk": 39,
+    "fields": {
+        "word": "help@mprog.nl",
+        "description": "",
+        "category": null,
+        "card": 7,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 40,
+    "fields": {
+        "word": "long",
+        "description": "",
+        "category": 1,
+        "card": 8,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 41,
+    "fields": {
+        "word": "Larry Page",
+        "description": "",
+        "category": 3,
+        "card": 8,
+        "pack": 3
+    }
+},
+{
+    "model": "api.word",
+    "pk": 42,
+    "fields": {
+        "word": "crack",
+        "description": "problem where you need to crack a 5 character password",
+        "category": 2,
+        "card": 8,
+        "pack": 1
+    }
+},
+{
+    "model": "api.word",
+    "pk": 43,
+    "fields": {
+        "word": "style50",
+        "description": "",
+        "category": null,
+        "card": 8,
+        "pack": null
+    }
+},
+{
+    "model": "api.word",
+    "pk": 44,
+    "fields": {
+        "word": "Google",
+        "description": "",
+        "category": null,
+        "card": 8,
+        "pack": null
+    }
+}
+]

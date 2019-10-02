@@ -1,20 +1,19 @@
 from django.core.exceptions import ObjectDoesNotExist
-from django.http import JsonResponse, HttpRequest
+from django.http import JsonResponse, HttpRequest, HttpResponse
 from django.urls import reverse
 
 from .models import Card, Session
 
 
 def index(request):
-    return JsonResponse({"test": True})
+    return HttpResponse("<pre>int seconds = 30;</pre>")
 
 
 def card_by_id(request, card_nr: int):
     try:
         card = Card.objects.get(number=card_nr)
-        return JsonResponse({'card': card_nr, 'words': card.words_list})
+        return JsonResponse({'card': card_nr, 'words': card.words_list_with_description})
     except ObjectDoesNotExist:
-        print('Does not exist')
         return JsonResponse({"error": f"Card {card_nr} does not exist!"})
 
 

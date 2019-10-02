@@ -15,9 +15,10 @@ class Command(BaseCommand):
         sessions = Session.objects.filter(last_activity__lt=threshold)
         sessions_deleted = len(sessions)
         sessions.delete()
-        if sessions_deleted is 0:
-            self.stdout.write(f"Removed {sessions_deleted} sessions")
+
+        if sessions_deleted > 1:
+            self.stdout.write(self.style.SUCCESS(f"Removed {sessions_deleted} sessions"))
         elif sessions_deleted is 1:
             self.stdout.write(self.style.SUCCESS(f"Removed {sessions_deleted} session"))
         else:
-            self.stdout.write(self.style.SUCCESS(f"Removed {sessions_deleted} sessions"))
+            self.stdout.write(self.style.WARNING(f"No sessions to remove"))
